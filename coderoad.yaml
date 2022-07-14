@@ -1,0 +1,51 @@
+id: '1'
+version: '1.0.0'
+config:
+  testRunner:
+    command: ./node_modules/.bin/mocha
+    args:
+      tap: --reporter=mocha-tap-reporter
+    directory: coderoad
+  setup:
+    commands:
+      - cd coderoad && npm install
+  repo:
+    uri: https://github.com/ExTeroos/javascript-tutorial-2
+    branch: v0.1.0
+  dependencies:
+    - name: node
+      version: '>=10'
+levels:
+  - id: '1'
+    steps:
+      - id: '1.1'
+      - id: '1.2'
+        setup:
+          files:
+            - main.js
+  - id: '2'
+    steps:
+      - id: '2.1'
+        setup:
+          files:
+            - main.js
+  - id: '3'
+    steps:
+      - id: '3.1'
+        setup:
+          files:
+            - main.js
+  - id: '4'
+    steps:
+      - id: '4.1'
+        setup:
+          files:
+            - main.js
+      - id: '4.2'
+        setup:
+          files:
+            - main.js
+      - id: '4.3'
+        setup:
+          files:
+            - main.js
