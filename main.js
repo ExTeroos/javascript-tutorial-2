@@ -57,6 +57,8 @@ fruits = products.filter(product => product.type == "Fruit");
 
 vegetables = products.filter(product => product.type == "Vegetable")
 
+cheaperProducts = products.filter(product => product.price <= 3);
+
 // Your space to code is above this line
 // DO NOT CHANGE THE CODE BELOW
 module.exports = { products, fruits, vegetables, cheaperProducts };
