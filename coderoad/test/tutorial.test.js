@@ -76,4 +76,34 @@ describe('main.js', () => {
     it('The \"products\" array should contain \"Strawberry\" at the end of the array', () => {
         assert.ok(products.some(prod => prod.name == "Strawberry"), '\"Strawberry\" wasn not added to the array');
     })
+
+// 3.1
+    it('The 1st element should contain \"Banana\"', () => {
+        assert.equal(products[0].name, "Banana", '\"Banana\" is not in a 1st element');
+    })
+
+    it('The 2nd element should contain \"Carrot\"', () => {
+    assert.equal(products[1].name, "Carrot", '\"Carrot\" is not in a 2nd element');
+    })
+
+    it('The 3rd element should contain \"Kiwi\"', () => {
+    assert.equal(products[2].name, "Kiwi", '\"Kiwi\" is not in a 3rd element');
+    })
+
+    it('The 4th element should contain \"Onion\"', () => {
+    assert.equal(products[3].name, "Onion", '\"Onion\" is not in a 4th element');
+    })
+
+    it('The 5th element should contain \"Potato\"', () => {
+    assert.equal(products[4].name, "Potato", '\"Potato\" is not in a 5th element');
+    })
+
+    it('The 6th element should contain \"Strawberry\"', () => {
+    assert.equal(products[5].name, "Strawberry", '\"Strawberry\" is not in a 6th element');
+    })
+
+    it('The 7th element should contain \"Tomato\"', () => {
+    assert.equal(products[6].name, "Tomato", '\"Tomato\" is not in a 7th element');
+    })
+
 })
