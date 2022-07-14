@@ -1,0 +1,185 @@
+{
+  "id": "1",
+  "version": "1.0.0",
+  "summary": {
+    "title": "Introduction",
+    "description": "This simple tutorial will show you the basics of arrays in JavaScript."
+  },
+  "config": {
+    "testRunner": {
+      "command": "./node_modules/.bin/mocha",
+      "args": {
+        "tap": "--reporter=mocha-tap-reporter"
+      },
+      "directory": "coderoad"
+    },
+    "setup": {
+      "commands": [
+        "cd coderoad && npm install"
+      ],
+      "commits": [
+        "87c5df182eeb13a4908285db158f4d1ad3032e80"
+      ]
+    },
+    "repo": {
+      "uri": "https://github.com/ExTeroos/javascript-tutorial-2",
+      "branch": "v0.1.0"
+    },
+    "dependencies": [
+      {
+        "name": "node",
+        "version": ">=10"
+      }
+    ]
+  },
+  "levels": [
+    {
+      "id": "1",
+      "title": "Create an array \"products\".",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1.1",
+          "content": "First, you must create an empty file called \"main.js\" in the main folder.",
+          "setup": {
+            "commits": [
+              "b8fd5b7b9a8b405e92e5e021160464281e05b8dd"
+            ]
+          },
+          "solution": {
+            "commits": [
+              "c2952b9861425b6419ef7cbe3c45f3f538a39f62"
+            ]
+          }
+        },
+        {
+          "id": "1.2",
+          "setup": {
+            "files": [
+              "main.js"
+            ],
+            "commits": [
+              "5086681dfa8f3f4185a1131408a41c8591c2a5df"
+            ]
+          },
+          "content": "In the file you've just created, **copy the above code**, which will create an array of objects representing products in the grocery store. In addition, it will declare three arrays that you will need later on.\r\n\r\n```\r\nlet products = [\r\n    {\r\n        \"name\": \"Tomato\",\r\n        \"type\": \"Fruit\",\r\n        \"price\": 5\r\n    },\r\n\r\n    {\r\n        \"name\": \"Potato\",\r\n        \"type\": \"Vegetable\",\r\n        \"price\": 2\r\n    },\r\n\r\n    {\r\n        \"name\": \"Banana\",\r\n        \"type\": \"Fruit\",\r\n        \"price\": 3\r\n    },\r\n\r\n    {\r\n        \"name\": \"Kiwi\",\r\n        \"type\": \"Fruit\",\r\n        \"price\": 4\r\n    },\r\n\r\n    {\r\n        \"name\": \"Carrot\",\r\n        \"type\": \"Vegetable\",\r\n        \"price\": 6\r\n    },\r\n\r\n    {\r\n        \"name\": \"Onion\",\r\n        \"type\": \"Vegetable\",\r\n        \"price\": 3\r\n    }\r\n]\r\n\r\nlet fruits = [];\r\nlet vegetables = [];\r\nlet cheaperProducts = [];\r\n\r\n// DO NOT CHANGE THE CODE ABOVE\r\n// Your space to code is below this line\r\n\r\n\r\n\r\n// Your space to code is above this line\r\n// DO NOT CHANGE THE CODE BELOW\r\nmodule.exports = { products, fruits, vegetables, cheaperProducts };\r\n```",
+          "solution": {
+            "commits": [
+              "6c893b00b51d5c48b532d94abca23f1ab8217355"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Add new object to array",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "2.1",
+          "setup": {
+            "files": [
+              "main.js"
+            ],
+            "commits": [
+              "873ac8ef1ffeca3e9a1ff2c86af11234a6d3f983"
+            ]
+          },
+          "content": "Create a new object, which will represent a strawberry by typing the following code:\r\n\r\n```\r\nlet strawberry = {\r\n    \"name\": \"Strawberry\",\r\n    \"type\": \"Fruit\",\r\n    \"price\": 4\r\n}\r\n```\r\n\r\nThen we need to add it at the last position. To do it you can use `push()` method.\r\n\r\nIt should look like that:\r\n```\r\nproducts.push(strawberry);\r\n```",
+          "solution": {
+            "commits": [
+              "1e204289b55a52fc941d3f2a2fc4d2849a5d5d15"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Sort the elements in the array",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "3.1",
+          "setup": {
+            "files": [
+              "main.js"
+            ],
+            "commits": [
+              "f63a7279a37a66f7516584cb4560b1e8a0c3c866"
+            ]
+          },
+          "content": "Now we can sort the products to make the array more transparent. Let's sort them alphabetically by typing the below line:\r\n\r\n```\r\nproducts = products.sort((p1, p2) => (p1.name > p2.name) ? 1 : (p1.name < p2.name) ? -1 : 0);\r\n```\r\n\r\nIt should sort our products. You can check if it worked by typing:\r\n\r\n```\r\nconsole.log(products);\r\n```",
+          "solution": {
+            "commits": [
+              "5e7cd272b77fdbfe8dbcb346739bf48b6e7d91ce"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Filter element by value",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "4.1",
+          "setup": {
+            "files": [
+              "main.js"
+            ],
+            "commits": [
+              "ca5db05f75a59493ec0793805687829e3c34ed18"
+            ]
+          },
+          "content": "Let's add vegetables and fruits to two different arrays. To do it, we can use the`filter()` method.\r\n\r\nUse to the following line to add all the products whose type equals **\"Fruit\"** to the `fruits` array:\r\n\r\n```\r\nfruits = products.filter(product => product.type == \"Fruit\");\r\n```",
+          "solution": {
+            "commits": [
+              "6ee09d32db00e6b8db1009889ac6fa1b10733dd9"
+            ]
+          }
+        },
+        {
+          "id": "4.2",
+          "setup": {
+            "files": [
+              "main.js"
+            ],
+            "commits": [
+              "4bfe5c2e0b4f2f7fa8cc7793cea199622a4b226e"
+            ]
+          },
+          "content": "Now, let's do the same thing with vegetables. Add to the `vegetables` array all the products with the **\"Vegetable\"** type.",
+          "solution": {
+            "commits": [
+              "7cb6df267e38276cd7b95f8cd4f90e631c6e7700"
+            ]
+          }
+        },
+        {
+          "id": "4.3",
+          "setup": {
+            "files": [
+              "main.js"
+            ],
+            "commits": [
+              "0435a96b36925ad3597984edf6c0ae6404bbe623"
+            ]
+          },
+          "content": "We can also filter objects by other values. Now, let's save in the array `cheaperProducts` all the products whose price equals or it's lower than **3**.",
+          "solution": {
+            "commits": [
+              "0314632d406fc96426f2bb36bcae5f4d0c556dfd"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
