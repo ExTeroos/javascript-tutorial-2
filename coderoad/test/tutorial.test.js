@@ -124,4 +124,12 @@ describe('main.js', () => {
         assert.ok(vegetables.some(vegetable => vegetable.name == "Carrot"), "\"Carrot\" is not in the array");
         assert.ok(vegetables.some(vegetable => vegetable.name == "Onion"), "\"Onion\" is not in the array");
     })
+
+// 4.3
+    it('The array \"cheaperProducts\" should contain all the products whose price equals or it\'s lower than 3', () => {
+        assert.equal(cheaperProducts.length, 3, "Array \"vegetables\" does not contain only vegetables or does not contain all the vegetables")
+        assert.ok(cheaperProducts.some(prod => prod.name == "Banana"), "\"Banana\" is not in the array");
+        assert.ok(cheaperProducts.some(prod => prod.name == "Potato"), "\"Potato\" is not in the array");
+        assert.ok(cheaperProducts.some(prod => prod.name == "Onion"), "\"Onion\" is not in the array");
+    })
 })
