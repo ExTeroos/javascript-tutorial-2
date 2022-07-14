@@ -55,6 +55,8 @@ products = products.sort((p1, p2) => (p1.name > p2.name) ? 1 : (p1.name < p2.nam
 
 fruits = products.filter(product => product.type == "Fruit");
 
+vegetables = products.filter(product => product.type == "Vegetable")
+
 // Your space to code is above this line
 // DO NOT CHANGE THE CODE BELOW
 module.exports = { products, fruits, vegetables, cheaperProducts };
