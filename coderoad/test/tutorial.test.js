@@ -67,4 +67,13 @@ describe('main.js', () => {
     assert.ok(Array.isArray(cheaperProducts), "\"cheaperProducts\" is not an array");
   })
 
+// 2.1
+    
+    it('The \"products\" array should now contain 7 objects', () => {
+        assert.equal(products.length, 7, '\"products\" does not contain 7 objects');
+    })
+
+    it('The \"products\" array should contain \"Strawberry\" at the end of the array', () => {
+        assert.ok(products.some(prod => prod.name == "Strawberry"), '\"Strawberry\" wasn not added to the array');
+    })
 })
