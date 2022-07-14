@@ -43,7 +43,13 @@ let cheaperProducts = [];
 // DO NOT CHANGE THE CODE ABOVE
 // Your space to code is below this line
 
+let strawberry = {
+    "name": "Strawberry",
+    "type": "Fruit",
+    "price": 4
+}
 
+products.push(strawberry);
 
 // Your space to code is above this line
 // DO NOT CHANGE THE CODE BELOW
