@@ -105,5 +105,14 @@ describe('main.js', () => {
     it('The 7th element should contain \"Tomato\"', () => {
     assert.equal(products[6].name, "Tomato", '\"Tomato\" is not in a 7th element');
     })
+    
+// 4.1
 
+    it('The array \"fruits\" should contain all the products whose type equal \"Fruit\"', () => {
+        assert.equal(fruits.length, 4, "Array \"fruits\" does not contain only fruits or does not contain all the fruits")
+        assert.ok(fruits.some(fruit => fruit.name == "Tomato"), "\"Tomato\" is not in the array");
+        assert.ok(fruits.some(fruit => fruit.name == "Strawberry"), "\"Strawberry\" is not in the array");
+        assert.ok(fruits.some(fruit => fruit.name == "Kiwi"), "\"Kiwi\" is not in the array");
+        assert.ok(fruits.some(fruit => fruit.name == "Banana"), "\"Banana\" is not in the array");
+    })
 })
