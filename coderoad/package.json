@@ -1,0 +1,15 @@
+{
+  "name": "js-tutorial-2",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "programmatic-test": "mocha --reporter=mocha-tap-reporter",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^10.0.0",
+    "mocha-tap-reporter": "^0.1.3"
+  }
+}
